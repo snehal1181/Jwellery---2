@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY PLACED ORDERS & PURCHASES | LUXEORA JEWELLERY</title>
+  <meta name="description"
+    content="View your past placed orders, track shipments, and review purchases from Luxeora Haute Joaillerie.">
+
+  <!-- Bootstrap 5 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- LUXEORA Royal Diamond Animated Preloader with Neon Flying Butterflies -->
+  <div id="luxeoraPreloader" class="luxeora-preloader" aria-hidden="true">
+    <div class="luxeora-loader-backdrop">
+      <div class="luxeora-loader-glow"></div>
+      <div class="luxeora-loader-guilloche"></div>
+      <div class="luxeora-loader-rosette"></div>
+      <div class="neon-sparkle-field">
+        <span class="neon-sparkle spark-1"></span>
+        <span class="neon-sparkle spark-2"></span>
+        <span class="neon-sparkle spark-3"></span>
+        <span class="neon-sparkle spark-4"></span>
+        <span class="neon-sparkle spark-5"></span>
+        <span class="neon-sparkle spark-6"></span>
+        <span class="neon-sparkle spark-7"></span>
+        <span class="neon-sparkle spark-8"></span>
+      </div>
+    </div>
+    <div class="luxeora-butterflies-stage" aria-hidden="true">
+      <div class="neon-butterfly-flight path-cyan">
+        <div class="neon-butterfly butterfly-cyan">
+          <div class="butterfly-wing wing-left">
+            <svg viewBox="0 0 36 44" class="wing-svg">
+              <path d="M34,22 C32,11 25,2 13,1 C3,0 0,8 1,16 C2,22 10,26 34,22 Z" class="wing-upper" />
+              <path d="M34,22 C27,24 16,28 10,34 C4,40 10,44 18,43 C26,42 32,32 34,22 Z" class="wing-lower" />
+              <path d="M33,21 C22,14 12,10 6,6" class="wing-vein" />
+              <path d="M33,21 C24,18 16,18 8,14" class="wing-vein" />
+              <path d="M33,22 C24,26 18,32 14,38" class="wing-vein" />
+              <circle cx="8" cy="8" r="1.5" class="wing-jewel" />
+              <circle cx="16" cy="4" r="1.2" class="wing-jewel" />
+              <circle cx="13" cy="38" r="1.2" class="wing-jewel" />
+            </svg>
+          </div>
+          <div class="butterfly-body-core">
+            <div class="butterfly-torso"></div>
+            <div class="butterfly-antenna ant-left"></div>
+            <div class="butterfly-antenna ant-right"></div>
+          </div>
+          <div class="butterfly-wing wing-right">
+            <svg viewBox="0 0 36 44" class="wing-svg">
+              <path d="M2,22 C4,11 11,2 23,1 C33,0 36,8 35,16 C34,22 26,26 2,22 Z" class="wing-upper" />
+              <path d="M2,22 C9,24 20,28 26,34 C32,40 26,44 18,43 C10,42 4,32 2,22 Z" class="wing-lower" />
+              <path d="M3,21 C14,14 24,10 30,6" class="wing-vein" />
+              <path d="M3,21 C12,18 20,18 28,14" class="wing-vein" />
+              <path d="M3,22 C12,26 18,32 22,38" class="wing-vein" />
+              <circle cx="28" cy="8" r="1.5" class="wing-jewel" />
+              <circle cx="20" cy="4" r="1.2" class="wing-jewel" />
+              <circle cx="23" cy="38" r="1.2" class="wing-jewel" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="neon-butterfly-flight path-magenta">
+        <div class="neon-butterfly butterfly-magenta">
+          <div class="butterfly-wing wing-left">
+            <svg viewBox="0 0 36 44" class="wing-svg">
+              <path d="M34,22 C32,11 25,2 13,1 C3,0 0,8 1,16 C2,22 10,26 34,22 Z" class="wing-upper" />
+              <path d="M34,22 C27,24 16,28 10,34 C4,40 10,44 18,43 C26,42 32,32 34,22 Z" class="wing-lower" />
+              <path d="M33,21 C22,14 12,10 6,6" class="wing-vein" />
+              <path d="M33,21 C24,18 16,18 8,14" class="wing-vein" />
+              <path d="M33,22 C24,26 18,32 14,38" class="wing-vein" />
+              <circle cx="8" cy="8" r="1.5" class="wing-jewel" />
+              <circle cx="16" cy="4" r="1.2" class="wing-jewel" />
+              <circle cx="13" cy="38" r="1.2" class="wing-jewel" />
+            </svg>
+          </div>
+          <div class="butterfly-body-core">
+            <div class="butterfly-torso"></div>
+            <div class="butterfly-antenna ant-left"></div>
+            <div class="butterfly-antenna ant-right"></div>
+          </div>
+          <div class="butterfly-wing wing-right">
+            <svg viewBox="0 0 36 44" class="wing-svg">
+              <path d="M2,22 C4,11 11,2 23,1 C33,0 36,8 35,16 C34,22 26,26 2,22 Z" class="wing-upper" />
+              <path d="M2,22 C9,24 20,28 26,34 C32,40 26,44 18,43 C10,42 4,32 2,22 Z" class="wing-lower" />
+              <path d="M3,21 C14,14 24,10 30,6" class="wing-vein" />
+              <path d="M3,21 C12,18 20,18 28,14" class="wing-vein" />
+              <path d="M3,22 C12,26 18,32 22,38" class="wing-vein" />
+              <circle cx="28" cy="8" r="1.5" class="wing-jewel" />
+              <circle cx="20" cy="4" r="1.2" class="wing-jewel" />
+              <circle cx="23" cy="38" r="1.2" class="wing-jewel" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="neon-butterfly-flight path-emerald">
+        <div class="neon-butterfly butterfly-emerald">
+          <div class="butterfly-wing wing-left">
+            <svg viewBox="0 0 36 44" class="wing-svg">
+              <path d="M34,22 C32,11 25,2 13,1 C3,0 0,8 1,16 C2,22 10,26 34,22 Z" class="wing-upper" />
+              <path d="M34,22 C27,24 16,28 10,34 C4,40 10,44 18,43 C26,42 32,32 34,22 Z" class="wing-lower" />
+              <path d="M33,21 C22,14 12,10 6,6" class="wing-vein" />
+              <path d="M33,21 C24,18 16,18 8,14" class="wing-vein" />
+              <path d="M33,22 C24,26 18,32 14,38" class="wing-vein" />
+              <circle cx="8" cy="8" r="1.5" class="wing-jewel" />
+              <circle cx="16" cy="4" r="1.2" class="wing-jewel" />
+              <circle cx="13" cy="38" r="1.2" class="wing-jewel" />
+            </svg>
+          </div>
+          <div class="butterfly-body-core">
+            <div class="butterfly-torso"></div>
+            <div class="butterfly-antenna ant-left"></div>
+            <div class="butterfly-antenna ant-right"></div>
+          </div>
+          <div class="butterfly-wing wing-right">
+            <svg viewBox="0 0 36 44" class="wing-svg">
+              <path d="M2,22 C4,11 11,2 23,1 C33,0 36,8 35,16 C34,22 26,26 2,22 Z" class="wing-upper" />
+              <path d="M2,22 C9,24 20,28 26,34 C32,40 26,44 18,43 C10,42 4,32 2,22 Z" class="wing-lower" />
+              <path d="M3,21 C14,14 24,10 30,6" class="wing-vein" />
+              <path d="M3,21 C12,18 20,18 28,14" class="wing-vein" />
+              <path d="M3,22 C12,26 18,32 22,38" class="wing-vein" />
+              <circle cx="28" cy="8" r="1.5" class="wing-jewel" />
+              <circle cx="20" cy="4" r="1.2" class="wing-jewel" />
+              <circle cx="23" cy="38" r="1.2" class="wing-jewel" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="neon-butterfly-flight path-violet">
+        <div class="neon-butterfly butterfly-violet">
+          <div class="butterfly-wing wing-left">
+            <svg viewBox="0 0 36 44" class="wing-svg">
+              <path d="M34,22 C32,11 25,2 13,1 C3,0 0,8 1,16 C2,22 10,26 34,22 Z" class="wing-upper" />
+              <path d="M34,22 C27,24 16,28 10,34 C4,40 10,44 18,43 C26,42 32,32 34,22 Z" class="wing-lower" />
+              <path d="M33,21 C22,14 12,10 6,6" class="wing-vein" />
+              <path d="M33,22 C24,26 18,32 14,38" class="wing-vein" />
+              <circle cx="8" cy="8" r="1.5" class="wing-jewel" />
+            </svg>
+          </div>
+          <div class="butterfly-body-core">
+            <div class="butterfly-torso"></div>
+            <div class="butterfly-antenna ant-left"></div>
+            <div class="butterfly-antenna ant-right"></div>
+          </div>
+          <div class="butterfly-wing wing-right">
+            <svg viewBox="0 0 36 44" class="wing-svg">
+              <path d="M2,22 C4,11 11,2 23,1 C33,0 36,8 35,16 C34,22 26,26 2,22 Z" class="wing-upper" />
+              <path d="M2,22 C9,24 20,28 26,34 C32,40 26,44 18,43 C10,42 4,32 2,22 Z" class="wing-lower" />
+              <path d="M3,21 C14,14 24,10 30,6" class="wing-vein" />
+              <path d="M3,22 C12,26 18,32 22,38" class="wing-vein" />
+              <circle cx="28" cy="8" r="1.5" class="wing-jewel" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="luxeora-loader-content">
+      <div class="luxeora-emblem-wrapper">
+        <div class="luxeora-astrolabe-ring"></div>
+        <div class="luxeora-orbital-ring outer-ring"></div>
+        <div class="luxeora-orbital-ring inner-ring">
+          <div class="orbital-sparkle-dot"></div>
+        </div>
+        <div class="luxeora-center-diamond">
+          <svg viewBox="0 0 100 100" class="diamond-svg">
+            <defs>
+              <linearGradient id="loaderGoldGlint" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" />
+                <stop offset="25%" stop-color="#FFEAA7" />
+                <stop offset="65%" stop-color="#D4AF37" />
+                <stop offset="100%" stop-color="#8F692E" />
+              </linearGradient>
+              <linearGradient id="loaderDiamondSpark" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="rgba(255, 255, 255, 0.95)" />
+                <stop offset="50%" stop-color="rgba(255, 248, 225, 0.75)" />
+                <stop offset="100%" stop-color="rgba(212, 175, 55, 0.35)" />
+              </linearGradient>
+              <filter id="loaderGoldGlow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="3.5" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+            <polygon points="50,14 82,34 82,66 50,86 18,66 18,34" fill="rgba(255, 255, 255, 0.72)" stroke="url(#loaderGoldGlint)" stroke-width="1.8" filter="url(#loaderGoldGlow)" />
+            <polygon points="50,22 75,38 75,62 50,78 25,62 25,38" fill="rgba(212, 175, 55, 0.14)" stroke="url(#loaderGoldGlint)" stroke-width="1.2" />
+            <line x1="50" y1="14" x2="50" y2="86" stroke="url(#loaderGoldGlint)" stroke-width="1" opacity="0.8" />
+            <line x1="18" y1="50" x2="82" y2="50" stroke="url(#loaderGoldGlint)" stroke-width="1" opacity="0.8" />
+            <line x1="25" y1="38" x2="75" y2="62" stroke="url(#loaderGoldGlint)" stroke-width="0.8" opacity="0.55" />
+            <line x1="25" y1="62" x2="75" y2="38" stroke="url(#loaderGoldGlint)" stroke-width="0.8" opacity="0.55" />
+            <polygon points="50,32 63,41 63,59 50,68 37,59 37,41" fill="url(#loaderDiamondSpark)" stroke="#FFEAA7" stroke-width="1.4" />
+            <circle cx="50" cy="50" r="3.5" fill="#FFFFFF" />
+          </svg>
+          <div class="diamond-flare-star"></div>
+        </div>
+      </div>
+      <div class="luxeora-brand-container">
+        <h2 class="luxeora-loader-title">LUXEORA</h2>
+        <div class="luxeora-loader-subtitle"><span>❖</span> HAUTE JOAILLERIE &bull; GENEVA &bull; EST. 1928 <span>❖</span></div>
+      </div>
+      <div class="luxeora-loader-status">
+        <span class="loader-status-dot"></span>
+        <span class="loader-status-text">CRAFTING HEIRLOOM BRILLIANCE</span>
+        <span class="loader-percent" id="luxeoraLoaderPercent">15%</span>
+      </div>
+      <div class="luxeora-progress-track">
+        <div class="progress-ticks">
+          <span class="tick t-25"></span>
+          <span class="tick t-50"></span>
+          <span class="tick t-75"></span>
+        </div>
+        <div class="luxeora-progress-fill">
+          <div class="progress-diamond-head"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement-bar">
+    <div class="container-fluid px-3 px-lg-4 d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div class="d-flex align-items-center flex-wrap gap-2 text-nowrap">
+        <span><i class="bi bi-patch-check-fill text-emerald me-1"></i> <strong class="fw-semibold">100% Certified Jewellery</strong></span>
+        <span class="opacity-50 mx-1">|</span>
+        <span>Complimentary Insured Shipping</span>
+        <span class="opacity-50 mx-1">|</span>
+        <span><i class="bi bi-arrow-repeat text-rosegold me-1"></i> 7 Days Exchange</span>
+      </div>
+      <div class="d-flex align-items-center gap-2 gap-md-3 text-nowrap ms-auto">
+        <a href="contact.html" class="tanishq-top-link"><i class="bi bi-geo-alt me-1 text-gold"></i> Find a Store</a>
+        <span class="opacity-50">|</span>
+        <a href="contact.html" class="tanishq-top-link"><i class="bi bi-telephone me-1 text-gold"></i> 1800 266 0123</a>
+        <span class="opacity-50">|</span>
+        <a href="contact.html" class="tanishq-top-link"><i class="bi bi-calendar-event me-1 text-gold"></i> Book Appointment</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header Bar -->
+  <header class="tanishq-main-header">
+    <div class="container-fluid px-3 px-lg-4">
+      <div class="d-flex align-items-center justify-content-between flex-nowrap gap-3 gap-lg-4 py-2.5">
+
+        <!-- Short Brand Logo -->
+        <div class="flex-shrink-0">
+          <a class="navbar-brand-logo" href="index.html">
+            <i class="bi bi-flower1 text-gold fs-3"></i>
+            <span>LUXEORA</span>
+          </a>
+        </div>
+
+        <!-- Search Bar at Center -->
+        <div class="flex-grow-1 d-flex align-items-center justify-content-center mx-3 mx-lg-5"
+          style="max-width: 720px;">
+          <div class="tanishq-search-container w-100">
+            <input type="text" class="tanishq-search-input"
+              placeholder="Search for Gold Earrings, Diamond Rings, Solitaires...">
+            <div class="tanishq-search-actions">
+              <button class="btn p-0 border-0 text-muted" title="Search"><i class="bi bi-search fs-6"></i></button>
+              <button class="btn p-0 border-0 text-muted" title="Visual Search"><i
+                  class="bi bi-camera fs-6"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Utility Actions -->
+        <div class="flex-shrink-0 text-end">
+          <div class="d-inline-flex align-items-center gap-3 gap-lg-4">
+            <a href="contact.html" class="tanishq-action-btn" title="Stores">
+              <i class="bi bi-geo-alt"></i>
+              <span>STORES</span>
+            </a>
+            <a href="wishlist.html" class="tanishq-action-btn header-tab-wishlist d-none" title="Wishlist">
+              <i class="bi bi-heart"></i>
+              <span>WISHLIST</span>
+            </a>
+            <a href="cart.html" class="tanishq-action-btn header-tab-cart d-none" title="Cart">
+              <i class="bi bi-bag"></i>
+              <span>CART</span>
+              <span class="badge-cart">0</span>
+            </a>
+
+            <!-- ACCOUNT Dropdown (Placed RIGHT of CART) -->
+            <div class="dropdown header-tab-account d-none">
+              <a href="javascript:void(0);" class="tanishq-action-btn active dropdown-toggle text-decoration-none"
+                id="accountDropdown" onclick="toggleAccountDropdown(event); return false;" aria-expanded="false"
+                title="Account">
+                <i class="bi bi-person"></i>
+                <span>ACCOUNT</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end shadow-lg border-gold rounded-3 mt-2 py-2"
+                aria-labelledby="accountDropdown"
+                style="min-width: 190px; background: #FFFDF9; border: 1px solid #C59B63;">
+                <li>
+                  <a class="dropdown-item py-2 px-3 d-flex align-items-center gap-2 font-serif text-dark"
+                    href="profile.html">
+                    <i class="bi bi-person-circle text-gold fs-6"></i>
+                    <span style="font-size: 0.85rem; font-weight: 500;">My Profile</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 px-3 d-flex align-items-center gap-2 font-serif text-dark fw-bold"
+                    href="orders.html" style="background-color: #FDF7EF; color: #C59B63;">
+                    <i class="bi bi-bag-check-fill text-gold fs-6"></i>
+                    <span style="font-size: 0.85rem; font-weight: 600;">Orders Placed</span>
+                  </a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider my-1" style="border-color: #EAD0B0;">
+                </li>
+                <li>
+                  <a class="dropdown-item py-2 px-3 d-flex align-items-center gap-2 font-serif text-danger" href="#"
+                    onclick="logoutUser(); return false;">
+                    <i class="bi bi-box-arrow-right fs-6"></i>
+                    <span style="font-size: 0.85rem; font-weight: 500;">Logout</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <a href="#" class="header-login-btn header-tab-login" onclick="openAuthModal('login'); return false;"
+              title="Login / Register">
+              <i class="bi bi-box-arrow-in-right me-1"></i>
+              <span>LOGIN</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-Width Hover Mega Menu Category Bar -->
+  <nav class="tanishq-category-bar position-relative">
+    <div class="container-fluid px-3 px-lg-4 position-relative">
+      <div class="d-flex align-items-center justify-content-center justify-content-lg-between gap-1">
+
+        <div class="png-nav-item-full"><a href="index.html" class="png-cat-link-btn">HOME</a></div>
+        <div class="png-nav-item-full"><a href="collections.html?cat=all&from=header" class="png-cat-link-btn">ALL
+            JEWELLERY</a></div>
+        <div class="png-nav-item-full"><a href="fine-jewelry.html" class="png-cat-link-btn">DIAMONDS</a></div>
+        <div class="png-nav-item-full"><a href="collections.html?cat=gold" class="png-cat-link-btn">GOLD</a></div>
+        <div class="png-nav-item-full"><a href="collections.html?cat=earrings" class="png-cat-link-btn">EARRINGS</a>
+        </div>
+        <div class="png-nav-item-full"><a href="collections.html?cat=rings" class="png-cat-link-btn">RINGS</a></div>
+        <div class="png-nav-item-full"><a href="collections.html?cat=necklaces" class="png-cat-link-btn">NECKLACES</a>
+        </div>
+        <div class="png-nav-item-full"><a href="collections.html?cat=bracelets" class="png-cat-link-btn">BANGLES &
+            BRACELETS</a></div>
+        <div class="png-nav-item-full"><a href="collections.html?cat=solitaires" class="png-cat-link-btn">SOLITAIRES</a>
+        </div>
+        <div class="png-nav-item-full"><a href="about.html" class="png-cat-link-btn">ABOUT US</a></div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb Header -->
+  <section class="py-4 bg-light-subtle border-bottom mb-4" style="background-color: #FAF5EF;">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb m-0 font-serif" style="font-size: 0.85rem;">
+          <li class="breadcrumb-item"><a href="index.html" class="text-gold text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item active text-dark fw-bold" aria-current="page">Orders Placed</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Standalone Orders Container -->
+  <div class="container pb-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2 pb-3 border-bottom"
+      style="border-color: #EAD0B0 !important;">
+      <div>
+        <h2 class="font-serif text-main m-0 fw-bold"><i class="bi bi-bag-check-fill text-gold me-2"></i> My Placed
+          Orders & Purchases</h2>
+        <small class="text-muted">Track past purchases, insured shipments & order details</small>
+      </div>
+      <span class="badge bg-gold-subtle text-gold font-serif px-3 py-2 fs-6 rounded-pill" id="ordersCountText"
+        style="background: #FDF7EF; border: 1px solid #C59B63;">Showing 0 Placed Orders</span>
+    </div>
+
+    <div id="placedOrdersGrid" class="row g-4">
+      <!-- Rendered dynamically via JS -->
+    </div>
+
+  </div>
+
+  <!-- Luxury Footer -->
+  <footer class="footer-luxury text-center text-lg-start">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand-logo mb-3 d-inline-block" href="index.html">
+            <i class="bi bi-flower1 text-gold fs-3"></i>
+            <span>LUXEORA<span class="text-gold font-serif ms-1">JEWELLERY</span></span>
+          </a>
+          <p class="text-muted pe-lg-4">
+            Masterpieces of Haute Joaillerie, 100% BIS Hallmarked certified gemstones, and bespoke custom jewelry design
+            studio.
+          </p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="font-serif text-gold text-uppercase mb-3">Collections</h6>
+          <ul class="list-unstyled">
+            <li><a href="collections.html?cat=all" class="footer-link">All Jewellery</a></li>
+            <li><a href="fine-jewelry.html" class="footer-link">Fine Jewelry</a></li>
+            <li><a href="high-jewelry.html" class="footer-link">High Jewelry</a></li>
+            <li><a href="custom-design.html" class="footer-link">Custom Studio</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="font-serif text-gold text-uppercase mb-3">Atelier Info</h6>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="footer-link">Our Heritage</a></li>
+            <li><a href="contact.html" class="footer-link">VIP Salon Booking</a></li>
+            <li><a href="orders.html" class="footer-link">Orders Placed</a></li>
+            <li><a href="wishlist.html" class="footer-link">Saved Wishlist</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h6 class="font-serif text-gold text-uppercase mb-3">Private VIP Newsletter</h6>
+          <p class="text-muted small">Receive private invitations to confidential Haute Joaillerie auctions and new
+            collection unveils.</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Enter your email...">
+            <button class="btn btn-gold" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="gold-divider my-4"></div>
+      <div class="text-center text-muted small">
+        © 2026 AURA ATELIER Haute Joaillerie. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle & Custom Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    function renderStandaloneOrders() {
+      const container = document.getElementById('placedOrdersGrid');
+      const countText = document.getElementById('ordersCountText');
+      if (!container) return;
+
+      let storedOrders = JSON.parse(localStorage.getItem('aura_orders') || '[]');
+      if (storedOrders.length === 0) {
+        storedOrders = [
+          {
+            id: 'LX-948201',
+            date: 'August 18, 2026',
+            status: 'Order Placed & Delivered',
+            badgeClass: 'badge-order-delivered',
+            icon: 'bi-check-circle-fill',
+            total: 48500,
+            items: [
+              {
+                title: "L'Étoile Burgundy Ruby & Diamond Masterpiece Necklace",
+                details: "18.50 Carats Burmese Ruby • 18k Yellow Gold & Platinum • Certificate GIA #820194",
+                image: "images/luxeora_hero_necklace.jpg",
+                price: 48500,
+                quantity: 1
+              }
+            ]
+          },
+          {
+            id: 'LX-810923',
+            date: 'May 12, 2026',
+            status: 'Order Placed & Delivered',
+            badgeClass: 'badge-order-delivered',
+            icon: 'bi-check-circle-fill',
+            total: 18900,
+            items: [
+              {
+                title: "Sovereign Solitaire Oval Diamond Ring",
+                details: "3.20 Carats VVS1 Clarity • 18k Rose Gold Micro-Pave Band",
+                image: "images/hero_ring.jpg",
+                price: 18900,
+                quantity: 1
+              }
+            ]
+          }
+        ];
+        localStorage.setItem('aura_orders', JSON.stringify(storedOrders));
+      }
+
+      if (countText) {
+        countText.textContent = `Showing ${storedOrders.length} Placed Order${storedOrders.length === 1 ? '' : 's'}`;
+      }
+
+      if (storedOrders.length === 0) {
+        container.innerHTML = `
+          <div class="col-12 text-center py-5">
+            <div class="p-5 border border-gold border-opacity-25 rounded-3 bg-white shadow-sm" style="max-width: 550px; margin: 0 auto;">
+              <i class="bi bi-bag-x text-gold display-3 mb-3 d-block"></i>
+              <h4 class="font-serif text-main mb-2">No Placed Orders Found</h4>
+              <p class="text-muted mb-4">You have not placed any orders yet. Explore our Haute Joaillerie creations to make your first purchase.</p>
+              <a href="collections.html" class="btn btn-gold px-4 py-2 font-serif fw-bold">Explore Catalogue</a>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = storedOrders.map(order => `
+        <div class="col-12">
+          <div class="order-history-card p-4 bg-white rounded-3 border shadow-sm mb-3" style="border-color: #EAD0B0 !important;">
+            <div class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-3 border-bottom" style="border-color: #EAD0B0 !important;">
+              <div>
+                <span class="fw-bold text-main font-serif fs-5">Order #${order.id}</span>
+                <span class="badge bg-gold text-dark ms-2 font-serif px-2 py-1" style="font-size:0.7rem; font-weight:600;">PLACED ORDER</span>
+                <span class="text-muted ms-3" style="font-size: 0.85rem;">Placed on ${order.date}</span>
+              </div>
+              <div class="mt-2 mt-sm-0 d-flex align-items-center gap-3">
+                <span class="${order.badgeClass || 'badge-order-delivered'} me-1">
+                  <i class="bi ${order.icon || 'bi-check-circle-fill'} me-1"></i> ${order.status || 'Order Placed'}
+                </span>
+                <span class="fw-bold text-main font-serif fs-5">$${order.total.toLocaleString()}</span>
+              </div>
+            </div>
+
+            ${order.items.map(item => `
+              <div class="row align-items-center g-3 mb-3">
+                <div class="col-auto">
+                  <img src="${item.image}" alt="${item.title}" class="rounded-2" style="width: 70px; height: 70px; object-fit: cover; border: 1px solid #EAD0B0;">
+                </div>
+                <div class="col">
+                  <h6 class="font-serif text-main m-0 fw-bold">${item.title}</h6>
+                  <small class="text-muted d-block" style="font-size: 0.8rem;">${item.details || ' BIS Hallmarked • Insured Atelier Delivery'}</small>
+                  <small class="text-gold font-serif fw-bold">Qty: ${item.quantity || 1} &nbsp;•&nbsp; $${item.price.toLocaleString()}</small>
+                </div>
+                <div class="col-auto text-end">
+                  <button class="btn btn-outline-dark btn-sm font-serif" onclick="showLuxuryToast('Certificate PDF downloaded for ${order.id}', 'bi-file-earmark-pdf');">
+                    <i class="bi bi-download me-1"></i> Invoice & GIA Certificate
+                  </button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderStandaloneOrders();
+    });
+  </script>
+
+</body>
+
+</html>
