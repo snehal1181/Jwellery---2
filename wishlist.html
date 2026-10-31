@@ -224,21 +224,23 @@
   </div>
 
   <!-- Top Announcement Bar -->
-  <div class="top-announcement-bar">
-    <div class="container-fluid px-3 px-lg-4 d-flex justify-content-between align-items-center flex-wrap gap-2">
-      <div class="d-flex align-items-center flex-wrap gap-2 text-nowrap">
-        <span><i class="bi bi-patch-check-fill text-emerald me-1"></i> <strong class="fw-semibold">100% Certified Jewellery</strong></span>
-        <span class="opacity-50 mx-1">|</span>
-        <span>Complimentary Insured Shipping</span>
-        <span class="opacity-50 mx-1">|</span>
-        <span><i class="bi bi-arrow-repeat text-rosegold me-1"></i> 7 Days Exchange</span>
-      </div>
-      <div class="d-flex align-items-center gap-2 gap-md-3 text-nowrap ms-auto">
-        <a href="contact.html" class="tanishq-top-link"><i class="bi bi-geo-alt me-1 text-gold"></i> Find a Store</a>
-        <span class="opacity-50">|</span>
-        <a href="contact.html" class="tanishq-top-link"><i class="bi bi-telephone me-1 text-gold"></i> 1800 266 0123</a>
-        <span class="opacity-50">|</span>
-        <a href="contact.html" class="tanishq-top-link"><i class="bi bi-calendar-event me-1 text-gold"></i> Book Appointment</a>
+  <div class="top-announcement-bar tanishq-top-bar">
+    <div class="container-fluid px-2 px-sm-3 px-lg-4">
+      <div class="top-bar-inner d-flex flex-column flex-lg-row justify-content-between align-items-center gap-1 gap-lg-2">
+        <div class="top-bar-trust d-flex align-items-center justify-content-center flex-wrap gap-2">
+          <span class="top-bar-item"><i class="bi bi-patch-check-fill text-emerald me-1"></i> <strong class="fw-semibold">100% Certified <span class="d-none d-sm-inline">Jewellery</span></strong></span>
+          <span class="top-bar-divider opacity-50">|</span>
+          <span class="top-bar-item"><span class="d-none d-sm-inline">Complimentary </span>Insured Shipping</span>
+          <span class="top-bar-divider opacity-50">|</span>
+          <span class="top-bar-item"><i class="bi bi-arrow-repeat text-rosegold me-1"></i> 7 Days Exchange</span>
+        </div>
+        <div class="top-bar-actions d-flex align-items-center justify-content-center flex-wrap gap-2 gap-md-3">
+          <a href="contact.html" class="tanishq-top-link top-bar-item"><i class="bi bi-geo-alt me-1 text-gold"></i> Find a Store</a>
+          <span class="top-bar-divider opacity-50">|</span>
+          <a href="tel:18002660123" class="tanishq-top-link top-bar-item"><i class="bi bi-telephone me-1 text-gold"></i> 1800 266 0123</a>
+          <span class="top-bar-divider opacity-50">|</span>
+          <a href="contact.html" class="tanishq-top-link top-bar-item"><i class="bi bi-calendar-event me-1 text-gold"></i> Book Appointment</a>
+        </div>
       </div>
     </div>
   </div>
@@ -246,18 +248,22 @@
   <!-- Main Header Bar -->
   <header class="tanishq-main-header">
     <div class="container-fluid px-3 px-lg-4">
-      <div class="d-flex align-items-center justify-content-between flex-nowrap gap-3 gap-lg-4 py-2.5">
+      <div class="d-flex align-items-center justify-content-between flex-nowrap gap-2 gap-lg-4 py-2">
 
-        <!-- Short Brand Logo -->
-        <div class="flex-shrink-0">
+        <!-- Short Brand Logo + Mobile Hamburger Button -->
+        <div class="flex-shrink-0 d-flex align-items-center">
+          <button class="btn p-0 border-0 text-gold fs-3 d-lg-none me-2 me-sm-3" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#mobileNavDrawer" aria-controls="mobileNavDrawer" title="Open Menu">
+            <i class="bi bi-list"></i>
+          </button>
           <a class="navbar-brand-logo" href="index.html">
             <i class="bi bi-flower1 text-gold fs-3"></i>
             <span>LUXEORA</span>
           </a>
         </div>
 
-        <!-- Search Bar at Center -->
-        <div class="flex-grow-1 d-flex align-items-center justify-content-center mx-3 mx-lg-5"
+        <!-- Search Bar at Center (Desktop View) -->
+        <div class="flex-grow-1 d-none d-lg-flex align-items-center justify-content-center mx-3 mx-lg-5"
           style="max-width: 720px;">
           <div class="tanishq-search-container w-100">
             <input type="text" class="tanishq-search-input"
@@ -272,18 +278,18 @@
 
         <!-- Right Utility Actions -->
         <div class="flex-shrink-0 text-end">
-          <div class="d-inline-flex align-items-center gap-3 gap-lg-4">
+          <div class="d-inline-flex align-items-center gap-2 gap-sm-3 gap-lg-4">
             <a href="contact.html" class="tanishq-action-btn" title="Stores">
               <i class="bi bi-geo-alt"></i>
-              <span>STORES</span>
+              <span class="d-none d-sm-inline">STORES</span>
             </a>
             <a href="wishlist.html" class="tanishq-action-btn active header-tab-wishlist d-none" title="Wishlist">
               <i class="bi bi-heart"></i>
-              <span>WISHLIST</span>
+              <span class="d-none d-sm-inline">WISHLIST</span>
             </a>
             <a href="cart.html" class="tanishq-action-btn header-tab-cart d-none" title="Cart">
               <i class="bi bi-bag"></i>
-              <span>CART</span>
+              <span class="d-none d-sm-inline">CART</span>
               <span class="badge-cart">0</span>
             </a>
 
@@ -293,7 +299,7 @@
                 id="accountDropdown" onclick="toggleAccountDropdown(event); return false;" aria-expanded="false"
                 title="Account">
                 <i class="bi bi-person"></i>
-                <span>ACCOUNT</span>
+                <span class="d-none d-sm-inline">ACCOUNT</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-end shadow-lg border-gold rounded-3 mt-2 py-2"
                 aria-labelledby="accountDropdown"
@@ -334,8 +340,74 @@
         </div>
 
       </div>
+
+      <!-- Mobile & Tablet Search Bar Row -->
+      <div class="w-100 d-block d-lg-none py-2 border-top border-gold border-opacity-10">
+        <div class="tanishq-search-container w-100">
+          <input type="text" class="tanishq-search-input"
+            placeholder="Search Gold Earrings, Diamond Rings, Solitaires...">
+          <div class="tanishq-search-actions">
+            <button class="btn p-0 border-0 text-muted" title="Search"><i class="bi bi-search fs-6"></i></button>
+            <button class="btn p-0 border-0 text-muted" title="Visual Search"><i
+                class="bi bi-camera fs-6"></i></button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </header>
+
+  <!-- Mobile Navigation Offcanvas Drawer -->
+  <div class="offcanvas offcanvas-start mobile-luxury-drawer d-lg-none" tabindex="-1" id="mobileNavDrawer"
+    aria-labelledby="mobileNavDrawerLabel">
+    <div class="offcanvas-header border-bottom border-gold py-3 px-3" style="background: #FAF5EF;">
+      <div class="d-flex align-items-center gap-2" id="mobileNavDrawerLabel">
+        <i class="bi bi-flower1 text-gold fs-3"></i>
+        <span class="font-serif fw-bold text-main fs-5" style="letter-spacing: 1px;">LUXEORA</span>
+      </div>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0">
+      <!-- Quick Info Banner inside Drawer -->
+      <div class="p-3 bg-gold-subtle border-bottom border-gold border-opacity-25 text-center">
+        <div class="fw-semibold text-gold small"><i class="bi bi-patch-check-fill me-1"></i> 100% BIS Hallmarked</div>
+        <div class="text-muted extra-small mt-1">Free Insured Shipping & 7 Days Exchange</div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="mobile-drawer-nav">
+        <a href="index.html" class="mobile-drawer-link"><i class="bi bi-house-door me-2 text-gold"></i> HOME</a>
+        <a href="collections.html?cat=all" class="mobile-drawer-link"><i class="bi bi-grid me-2 text-gold"></i> ALL JEWELLERY</a>
+        <a href="high-jewelry.html" class="mobile-drawer-link"><i class="bi bi-gem me-2 text-gold"></i> HIGH JEWELLERY</a>
+        <a href="fine-jewelry.html" class="mobile-drawer-link"><i class="bi bi-sparkles me-2 text-gold"></i> FINE JEWELLERY</a>
+        <a href="collections.html?cat=rings" class="mobile-drawer-link"><i class="bi bi-circle me-2 text-gold"></i> RINGS</a>
+        <a href="collections.html?cat=earrings" class="mobile-drawer-link"><i class="bi bi-stars me-2 text-gold"></i> EARRINGS</a>
+        <a href="collections.html?cat=necklaces" class="mobile-drawer-link"><i class="bi bi-flower2 me-2 text-gold"></i> NECKLACES</a>
+        <a href="collections.html?cat=bangles" class="mobile-drawer-link"><i class="bi bi-circle-notch me-2 text-gold"></i> BANGLES</a>
+        <a href="collections.html?cat=diamonds" class="mobile-drawer-link"><i class="bi bi-award me-2 text-gold"></i> SOLITAIRES</a>
+        <a href="custom-design.html" class="mobile-drawer-link"><i class="bi bi-palette me-2 text-gold"></i> CUSTOM DESIGN</a>
+        <a href="about.html" class="mobile-drawer-link"><i class="bi bi-info-circle me-2 text-gold"></i> ABOUT US</a>
+        <a href="contact.html" class="mobile-drawer-link"><i class="bi bi-geo-alt me-2 text-gold"></i> FIND A STORE</a>
+      </div>
+
+      <!-- VIP Account Links inside Drawer -->
+      <div class="p-2 border-top border-gold border-opacity-25 bg-gold-subtle">
+        <div class="small fw-bold text-gold px-2 pt-1 pb-2 font-serif text-uppercase" style="letter-spacing: 1px;">My Atelier Account</div>
+        <div class="mobile-drawer-nav">
+          <a href="profile.html" class="mobile-drawer-link py-2"><i class="bi bi-person-circle me-2 text-gold"></i> My Profile</a>
+          <a href="orders.html" class="mobile-drawer-link py-2"><i class="bi bi-bag-check me-2 text-gold"></i> Orders Placed</a>
+          <a href="wishlist.html" class="mobile-drawer-link py-2 active"><i class="bi bi-heart me-2 text-gold"></i> Saved Wishlist</a>
+          <a href="cart.html" class="mobile-drawer-link py-2"><i class="bi bi-bag me-2 text-gold"></i> Shopping Bag</a>
+        </div>
+      </div>
+
+      <!-- Quick Contact Info -->
+      <div class="p-3 border-top text-center text-muted small" style="background: #FAF6F0;">
+        <div class="fw-semibold text-gold mb-1"><i class="bi bi-telephone me-1"></i> 1800 266 0123</div>
+        <div>100% Certified • Free Insured Shipping</div>
+      </div>
+    </div>
+  </div>
 
   <!-- Full-Width Hover Mega Menu Category Bar -->
   <nav class="tanishq-category-bar position-relative">

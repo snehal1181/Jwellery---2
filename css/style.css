@@ -134,10 +134,9 @@
    ========================================================================== */
 .luxeora-preloader {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   z-index: 9999999;
   display: flex;
   align-items: center;
@@ -328,21 +327,21 @@
   pointer-events: none;
 }
 
-/* Flight Paths */
+/* Flight Paths - 2 Rotate Clockwise (Cyan & Emerald), 2 Rotate Anti-Clockwise (Magenta & Violet) */
 .neon-butterfly-flight.path-cyan {
-  animation: flightPathCyan 9s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  animation: flightPathCyan 8.8s linear infinite;
 }
 
 .neon-butterfly-flight.path-magenta {
-  animation: flightPathMagenta 7.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  animation: flightPathMagenta 8.4s linear infinite;
 }
 
 .neon-butterfly-flight.path-emerald {
-  animation: flightPathEmerald 6.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  animation: flightPathEmerald 7.4s linear infinite;
 }
 
 .neon-butterfly-flight.path-violet {
-  animation: flightPathViolet 5.5s ease-in-out infinite alternate;
+  animation: flightPathViolet 7.0s linear infinite;
 }
 
 /* Butterfly 3D Assembly */
@@ -799,71 +798,74 @@
   100% { opacity: 0; transform: translate(-80%, -80%) scale(0.2); }
 }
 
+/* Butterfly 1: Clockwise Flight Path (Outer Orbit, R=185px) */
 @keyframes flightPathCyan {
-  0% {
-    transform: translate(-140px, 100px) rotate(-18deg) scale(0.85);
-  }
-  24% {
-    transform: translate(-100px, -80px) rotate(22deg) scale(1);
-  }
-  48% {
-    transform: translate(60px, -120px) rotate(42deg) scale(0.95);
-  }
-  72% {
-    transform: translate(120px, 0px) rotate(-12deg) scale(0.85);
-  }
-  100% {
-    transform: translate(-140px, 100px) rotate(-18deg) scale(0.85);
-  }
+  0% { transform: translate(185px, 0px) rotate(90deg) scale(1.00); }
+  8.33% { transform: translate(160px, 93px) rotate(120deg) scale(1.02); }
+  16.67% { transform: translate(93px, 160px) rotate(150deg) scale(1.04); }
+  25% { transform: translate(0px, 185px) rotate(180deg) scale(1.05); }
+  33.33% { transform: translate(-93px, 160px) rotate(210deg) scale(1.04); }
+  41.67% { transform: translate(-160px, 93px) rotate(240deg) scale(1.02); }
+  50% { transform: translate(-185px, 0px) rotate(270deg) scale(1.00); }
+  58.33% { transform: translate(-160px, -93px) rotate(300deg) scale(0.97); }
+  66.67% { transform: translate(-93px, -160px) rotate(330deg) scale(0.96); }
+  75% { transform: translate(0px, -185px) rotate(360deg) scale(0.95); }
+  83.33% { transform: translate(93px, -160px) rotate(390deg) scale(0.96); }
+  91.67% { transform: translate(160px, -93px) rotate(420deg) scale(0.97); }
+  100% { transform: translate(185px, 0px) rotate(450deg) scale(1.00); }
 }
 
+/* Butterfly 2: Anti-Clockwise Flight Path (Outer Orbit, R=180px) */
 @keyframes flightPathMagenta {
-  0% {
-    transform: translate(130px, 70px) rotate(28deg) scale(0.9);
-  }
-  26% {
-    transform: translate(90px, -90px) rotate(-22deg) scale(1.05);
-  }
-  52% {
-    transform: translate(-70px, -70px) rotate(-46deg) scale(0.88);
-  }
-  76% {
-    transform: translate(-110px, 75px) rotate(16deg) scale(0.95);
-  }
-  100% {
-    transform: translate(130px, 70px) rotate(28deg) scale(0.9);
-  }
+  0% { transform: translate(0px, 180px) rotate(0deg) scale(1.00); }
+  8.33% { transform: translate(90px, 156px) rotate(-30deg) scale(1.02); }
+  16.67% { transform: translate(156px, 90px) rotate(-60deg) scale(1.04); }
+  25% { transform: translate(180px, 0px) rotate(-90deg) scale(1.05); }
+  33.33% { transform: translate(156px, -90px) rotate(-120deg) scale(1.04); }
+  41.67% { transform: translate(90px, -156px) rotate(-150deg) scale(1.02); }
+  50% { transform: translate(0px, -180px) rotate(-180deg) scale(1.00); }
+  58.33% { transform: translate(-90px, -156px) rotate(-210deg) scale(0.97); }
+  66.67% { transform: translate(-156px, -90px) rotate(-240deg) scale(0.96); }
+  75% { transform: translate(-180px, 0px) rotate(-270deg) scale(0.95); }
+  83.33% { transform: translate(-156px, 90px) rotate(-300deg) scale(0.96); }
+  91.67% { transform: translate(-90px, 156px) rotate(-330deg) scale(0.97); }
+  100% { transform: translate(0px, 180px) rotate(-360deg) scale(1.00); }
 }
 
+/* Butterfly 3: Clockwise Flight Path (Inner Orbit, R=135px) */
 @keyframes flightPathEmerald {
-  0% {
-    transform: translate(70px, 130px) rotate(-32deg) scale(0.78);
-  }
-  30% {
-    transform: translate(-40px, 50px) rotate(18deg) scale(0.92);
-  }
-  60% {
-    transform: translate(-90px, -15px) rotate(-18deg) scale(0.85);
-  }
-  85% {
-    transform: translate(30px, 80px) rotate(26deg) scale(0.88);
-  }
-  100% {
-    transform: translate(70px, 130px) rotate(-32deg) scale(0.78);
-  }
+  0% { transform: translate(-135px, 0px) rotate(270deg) scale(1.00); }
+  8.33% { transform: translate(-117px, -68px) rotate(300deg) scale(1.02); }
+  16.67% { transform: translate(-68px, -117px) rotate(330deg) scale(1.04); }
+  25% { transform: translate(0px, -135px) rotate(360deg) scale(1.05); }
+  33.33% { transform: translate(68px, -117px) rotate(390deg) scale(1.04); }
+  41.67% { transform: translate(117px, -68px) rotate(420deg) scale(1.02); }
+  50% { transform: translate(135px, 0px) rotate(450deg) scale(1.00); }
+  58.33% { transform: translate(117px, 68px) rotate(480deg) scale(0.97); }
+  66.67% { transform: translate(68px, 117px) rotate(510deg) scale(0.96); }
+  75% { transform: translate(0px, 135px) rotate(540deg) scale(0.95); }
+  83.33% { transform: translate(-68px, 117px) rotate(570deg) scale(0.96); }
+  91.67% { transform: translate(-117px, 68px) rotate(600deg) scale(0.97); }
+  100% { transform: translate(-135px, 0px) rotate(630deg) scale(1.00); }
 }
 
+/* Butterfly 4: Anti-Clockwise Flight Path (Inner Orbit, R=130px) */
 @keyframes flightPathViolet {
-  0% {
-    transform: translate(-50px, -130px) rotate(8deg) scale(0.7);
-  }
-  50% {
-    transform: translate(70px, -110px) rotate(-16deg) scale(0.8);
-  }
-  100% {
-    transform: translate(-50px, -130px) rotate(8deg) scale(0.7);
-  }
+  0% { transform: translate(0px, -130px) rotate(180deg) scale(1.00); }
+  8.33% { transform: translate(-65px, -113px) rotate(150deg) scale(1.02); }
+  16.67% { transform: translate(-113px, -65px) rotate(120deg) scale(1.04); }
+  25% { transform: translate(-130px, 0px) rotate(90deg) scale(1.05); }
+  33.33% { transform: translate(-113px, 65px) rotate(60deg) scale(1.04); }
+  41.67% { transform: translate(-65px, 113px) rotate(30deg) scale(1.02); }
+  50% { transform: translate(0px, 130px) rotate(0deg) scale(1.00); }
+  58.33% { transform: translate(65px, 113px) rotate(-30deg) scale(0.97); }
+  66.67% { transform: translate(113px, 65px) rotate(-60deg) scale(0.96); }
+  75% { transform: translate(130px, 0px) rotate(-90deg) scale(0.95); }
+  83.33% { transform: translate(113px, -65px) rotate(-120deg) scale(0.96); }
+  91.67% { transform: translate(65px, -113px) rotate(-150deg) scale(0.97); }
+  100% { transform: translate(0px, -130px) rotate(-180deg) scale(1.00); }
 }
+
 
 @keyframes floatNeonSparkle {
   0% { transform: translateY(0) scale(0.7); opacity: 0.3; }
@@ -966,20 +968,18 @@
 /* Canvas Particle Backdrop & Ambient Lights */
 #particle-canvas {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
 }
 
 .page-ambient-lights {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
@@ -1211,26 +1211,175 @@ body:hover .cursor-sparkle {
   opacity: 0.8;
 }
 
-/* Top Announcement Bar (Tanishq Style) */
+/* Top Announcement Bar (Tanishq Style Architecture) */
 .top-announcement-bar {
   background-color: var(--burgundy-primary);
   border-bottom: 1px solid var(--gold-border);
   font-size: 0.78rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   padding: 6px 0;
   color: var(--gold-light);
   z-index: 1040;
+  position: relative;
+  width: 100%;
+}
+
+.tanishq-top-bar .top-bar-inner {
+  width: 100%;
+}
+
+.top-bar-trust,
+.top-bar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-item {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.top-bar-divider {
+  color: var(--gold-border, #C59B63);
+  opacity: 0.45;
+  user-select: none;
+  margin: 0 4px;
 }
 
 .tanishq-top-link {
   color: var(--gold-light);
   text-decoration: none;
   font-size: 0.75rem;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
 }
 
 .tanishq-top-link:hover {
   color: #FFFFFF;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+/* Intermediate Tablet Breakpoint (< 992px) */
+@media (max-width: 991.98px) {
+  .top-announcement-bar {
+    padding: 5px 0;
+  }
+
+  .top-announcement-bar .container-fluid {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  /* Support both new structure (.top-bar-inner) and legacy markup */
+  .top-announcement-bar .top-bar-inner,
+  .top-announcement-bar > .container-fluid.d-flex,
+  .top-announcement-bar > .container-fluid > .d-flex {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 4px !important;
+    text-align: center !important;
+  }
+
+  /* Prevent ms-auto from pushing right items away on stacked lines */
+  .top-announcement-bar .ms-auto,
+  .top-announcement-bar .top-bar-actions {
+    margin-left: 0 !important;
+    justify-content: center !important;
+  }
+
+  .top-announcement-bar .top-bar-trust,
+  .top-announcement-bar .top-bar-actions,
+  .top-announcement-bar .d-flex.align-items-center {
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
+
+/* Mobile & Tablet Below 768px (< 768px Responsive Standard) */
+@media (max-width: 767.98px) {
+  .top-announcement-bar {
+    font-size: clamp(0.68rem, 2.2vw, 0.74rem) !important;
+    padding: 4px 0 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.35 !important;
+  }
+
+  .tanishq-top-link {
+    font-size: clamp(0.68rem, 2.2vw, 0.74rem) !important;
+    padding: 2px 4px !important;
+  }
+
+  /* Allow flex wrapping on smaller viewports to prevent horizontal overflow */
+  .top-announcement-bar .text-nowrap {
+    white-space: normal !important;
+    flex-wrap: wrap !important;
+  }
+
+  .top-announcement-bar .top-bar-inner,
+  .top-announcement-bar > .container-fluid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 3px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .top-announcement-bar .top-bar-trust,
+  .top-announcement-bar .top-bar-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 2px 6px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* Subtle prestige gold hairline dividing the 2 rows cleanly */
+  .top-announcement-bar .top-bar-actions,
+  .top-announcement-bar .container-fluid > div:nth-child(2) {
+    border-top: 1px solid rgba(212, 175, 55, 0.18) !important;
+    padding-top: 3px !important;
+    margin-top: 1px !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .top-announcement-bar .top-bar-divider {
+    margin: 0 3px !important;
+    font-size: 0.75em !important;
+    opacity: 0.4 !important;
+  }
+}
+
+/* Compact Mobile Screens (< 400px down to 320px) */
+@media (max-width: 399.98px) {
+  .top-announcement-bar {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.01em !important;
+    padding: 3px 0 !important;
+  }
+
+  .tanishq-top-link {
+    font-size: 0.65rem !important;
+    padding: 1px 2px !important;
+  }
+
+  .top-announcement-bar .top-bar-trust,
+  .top-announcement-bar .top-bar-actions {
+    gap: 2px 4px !important;
+  }
+
+  .top-announcement-bar .top-bar-divider {
+    margin: 0 1px !important;
+    font-size: 0.7em !important;
+  }
 }
 
 /* Header & Navigation Bar (Tanishq Style Architecture) */
@@ -1262,8 +1411,8 @@ body:hover .cursor-sparkle {
 /* Search Bar & Header Layout */
 .tanishq-search-container {
   position: relative;
-  max-width: 480px;
   width: 100%;
+  max-width: 100%;
 }
 
 .tanishq-search-input {
@@ -1292,6 +1441,22 @@ body:hover .cursor-sparkle {
   align-items: center;
   gap: 8px;
   color: var(--text-main);
+}
+
+.tanishq-search-actions button {
+  background: transparent;
+  color: #7A6658;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.tanishq-search-actions button:hover {
+  color: var(--gold-primary, #C59B63);
+  background: rgba(197, 155, 99, 0.12);
 }
 
 /* Header Search Live Autocomplete Dropdown */
@@ -3047,41 +3212,47 @@ body:hover .cursor-sparkle {
 /* Shopping Bag Drawer */
 .cart-drawer-backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.65);
   backdrop-filter: blur(6px);
   z-index: 1060;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .cart-drawer-backdrop.show {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
 .cart-drawer {
   position: fixed;
   top: 0;
-  right: -450px;
+  right: 0;
   width: 100%;
-  max-width: 450px;
+  max-width: 420px;
   height: 100vh;
   background: var(--modal-bg);
   border-left: 1px solid var(--gold-border);
   box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
   z-index: 1070;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s ease;
   display: flex;
   flex-direction: column;
 }
 
 .cart-drawer.show {
-  right: 0;
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .cart-drawer-header {
@@ -3194,9 +3365,6 @@ body:hover .cursor-sparkle {
     margin-bottom: 1rem;
   }
 
-  .cart-drawer {
-    max-width: 100vw;
-  }
 }
 
 /* User Profile Page Styling */
@@ -4623,12 +4791,6 @@ body:hover .cursor-sparkle {
 
 /* 4. Responsive Breakpoint Rules (<576px - Mobile Phones) */
 @media (max-width: 575.98px) {
-  .top-announcement-bar {
-    font-size: 0.72rem;
-    text-align: center;
-    padding: 6px 10px;
-  }
-
   .navbar-brand-logo {
     font-size: 1.45rem;
   }
@@ -4724,7 +4886,77 @@ body:hover .cursor-sparkle {
   }
 }
 
-/* Strict Full Screen Width Enforcement & Negative Margin Fix for All Devices */
+/* ==========================================================================
+   COMPREHENSIVE FULLY RESPONSIVE ENGINE (MOBILE 320PX TO 4K DESKTOP)
+   ========================================================================== */
+
+/* 1. Global Viewport & Horizontal Overflow Prevention */
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* 2. Container Hierarchy with Centering Guarantee */
+.container {
+  width: 100% !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+.container-fluid {
+  width: 100% !important;
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px !important;
+  }
+}
+
+/* 3. Negative Margin & Row Protection */
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* 4. Section Full Width Enforcements */
 .top-announcement-bar,
 .tanishq-main-header,
 .tanishq-category-bar,
@@ -4742,26 +4974,240 @@ body:hover .cursor-sparkle {
   box-sizing: border-box !important;
 }
 
-.row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+/* 5. Mobile Luxury Offcanvas Navigation Drawer */
+.mobile-luxury-drawer {
+  max-width: 320px !important;
+  width: 85vw !important;
+  background-color: #FFFDF9 !important;
+  border-right: 1px solid #D4AF37 !important;
+  box-shadow: 4px 0 25px rgba(35, 12, 16, 0.2) !important;
+  z-index: 1065 !important;
 }
 
-.container-fluid,
-.container {
-  padding-left: 12px !important;
-  padding-right: 12px !important;
-  width: 100% !important;
-  max-width: 100% !important;
+.mobile-luxury-drawer .offcanvas-header {
+  background: #FAF5EF !important;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4) !important;
 }
 
-@media (min-width: 992px) {
-  .container {
-    max-width: 1320px !important;
+.mobile-drawer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-drawer-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #2D2424;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(234, 208, 176, 0.35);
+  transition: all 0.2s ease;
+  min-height: 44px;
+}
+
+.mobile-drawer-link:hover,
+.mobile-drawer-link.active {
+  background: #FDF7EF;
+  color: #C59B63;
+  padding-left: 24px;
+  font-weight: 600;
+}
+
+/* 6. Tablet & Mobile Viewport Rules (<992px) */
+@media (max-width: 991.98px) {
+  /* Hide Desktop Mega-menu dropdown to prevent layout blowouts and swipe collisions */
+  .png-full-mega-container,
+  .png-nav-item-full:hover .png-full-mega-container,
+  .png-full-mega-container.mega-open {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+  }
+
+  /* Right Catalog Column: eliminate trapped scroll */
+  .catalog-right-scrollable {
+    max-height: none !important;
+    overflow-y: visible !important;
+    min-height: auto !important;
+    padding-right: 0 !important;
+  }
+
+  /* Product Card Actions: Always visible on touch devices */
+  .card-quick-actions {
+    position: relative !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 10px 0 0 0 !important;
+    z-index: 1 !important;
+  }
+
+  .card-quick-actions .btn-quick-action {
+    height: 38px !important;
+    font-size: 0.72rem !important;
+  }
+
+  /* Hero Sidebar: completely hide on tablet/mobile so slider gets 100% width */
+  .royal-arch-overlay-svg,
+  .royal-hero-sidebar {
+    display: none !important;
+  }
+
+  .exact-hero-content {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Mobile & Tablet Search Bar: Full Width at 768px & Touch Viewports */
+  .tanishq-main-header .tanishq-search-container,
+  .tanishq-search-container {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .tanishq-search-input {
+    width: 100% !important;
+    min-height: 42px;
+    font-size: 0.86rem;
   }
 }
 
-/* Strict Hero Text Positioning & Padding Override to prevent container global rule interference */
+/* Touch device support for hover */
+@media (hover: none) and (pointer: coarse) {
+  .card-quick-actions {
+    position: relative !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    padding: 10px 0 0 0 !important;
+  }
+}
+
+/* 7. Mobile Phone Viewport Rules (<576px) */
+@media (max-width: 575.98px) {
+  /* Fluid responsive typography */
+  .display-1 { font-size: clamp(2.2rem, 7vw, 3.2rem) !important; }
+  .display-2 { font-size: clamp(1.9rem, 6.2vw, 2.7rem) !important; }
+  .display-3 { font-size: clamp(1.7rem, 5.5vw, 2.3rem) !important; }
+  .display-4 { font-size: clamp(1.5rem, 5vw, 2.0rem) !important; }
+  .display-5 { font-size: clamp(1.35rem, 4.2vw, 1.7rem) !important; }
+  .display-6 { font-size: clamp(1.2rem, 3.8vw, 1.45rem) !important; }
+
+  /* Fluid hero h1 */
+  .exact-hero-content h1 {
+    font-size: clamp(1.6rem, 5.5vw, 2.2rem) !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Cart items & drawer on mobile */
+  .cart-item-thumb,
+  .cart-item-img {
+    width: 75px !important;
+    height: 75px !important;
+    min-width: 75px !important;
+  }
+
+  .cart-drawer {
+    max-width: 100% !important;
+  }
+
+  /* Interactive ring canvas on mobile */
+  #ringPreviewCanvas {
+    height: 320px !important;
+  }
+
+  /* Touch accessibility */
+  .btn,
+  .tanishq-action-btn,
+  .form-select,
+  .form-control {
+    min-height: 42px;
+  }
+
+  /* Category halo icons */
+  .category-img-halo {
+    width: 85px !important;
+    height: 85px !important;
+  }
+
+  /* Interactive customizer studio */
+  .customizer-preview-container {
+    min-height: 290px !important;
+  }
+
+  /* Bootstrap Modal responsive spacing */
+  .modal-dialog {
+    margin: 0.5rem !important;
+    max-width: calc(100% - 1rem) !important;
+  }
+
+  .modal-content {
+    padding: 0.75rem !important;
+  }
+
+  /* Search dropdown mobile keyboard clearance */
+  .tanishq-search-results-dropdown {
+    max-height: 320px !important;
+  }
+
+  /* Gutter adjustment for mobile forms & showcases */
+  .row.g-5 {
+    --bs-gutter-y: 1.5rem !important;
+  }
+
+  /* Profile page tabs mobile wrapping */
+  .profile-nav-pills {
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+  }
+
+  .profile-nav-pills .nav-link {
+    padding: 8px 14px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* 8. Extra-Small Phone Viewport Rules (<380px) */
+@media (max-width: 379.98px) {
+  .navbar-brand-logo span {
+    font-size: 1.15rem !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .header-login-btn span {
+    display: none !important;
+  }
+
+  .header-login-btn {
+    padding: 5px 8px !important;
+  }
+
+  .category-img-halo {
+    width: 72px !important;
+    height: 72px !important;
+  }
+
+  .trust-card-item {
+    padding: 12px 10px !important;
+  }
+
+  .trust-card-icon-badge {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* 9. Desktop Hero Padding Alignment */
 @media (min-width: 992px) {
   .container.exact-hero-content,
   .exact-hero-content {

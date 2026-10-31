@@ -236,21 +236,23 @@
   </div>
 
   <!-- Top Announcement Bar (Tanishq Layer 1) -->
-  <div class="top-announcement-bar">
-    <div class="container-fluid px-3 px-lg-4 d-flex justify-content-between align-items-center flex-wrap gap-2">
-      <div class="d-flex align-items-center flex-wrap gap-2 text-nowrap">
-        <span><i class="bi bi-patch-check-fill text-emerald me-1"></i> <strong class="fw-semibold">100% Certified Jewellery</strong></span>
-        <span class="opacity-50 mx-1">|</span>
-        <span>Complimentary Insured Shipping</span>
-        <span class="opacity-50 mx-1">|</span>
-        <span><i class="bi bi-arrow-repeat text-rosegold me-1"></i> 7 Days Exchange</span>
-      </div>
-      <div class="d-flex align-items-center gap-2 gap-md-3 text-nowrap ms-auto">
-        <a href="contact.html" class="tanishq-top-link"><i class="bi bi-geo-alt me-1 text-gold"></i> Find a Store</a>
-        <span class="opacity-50">|</span>
-        <a href="contact.html" class="tanishq-top-link"><i class="bi bi-telephone me-1 text-gold"></i> 1800 266 0123</a>
-        <span class="opacity-50">|</span>
-        <a href="contact.html" class="tanishq-top-link"><i class="bi bi-calendar-event me-1 text-gold"></i> Book Appointment</a>
+  <div class="top-announcement-bar tanishq-top-bar">
+    <div class="container-fluid px-2 px-sm-3 px-lg-4">
+      <div class="top-bar-inner d-flex flex-column flex-lg-row justify-content-between align-items-center gap-1 gap-lg-2">
+        <div class="top-bar-trust d-flex align-items-center justify-content-center flex-wrap gap-2">
+          <span class="top-bar-item"><i class="bi bi-patch-check-fill text-emerald me-1"></i> <strong class="fw-semibold">100% Certified <span class="d-none d-sm-inline">Jewellery</span></strong></span>
+          <span class="top-bar-divider opacity-50">|</span>
+          <span class="top-bar-item"><span class="d-none d-sm-inline">Complimentary </span>Insured Shipping</span>
+          <span class="top-bar-divider opacity-50">|</span>
+          <span class="top-bar-item"><i class="bi bi-arrow-repeat text-rosegold me-1"></i> 7 Days Exchange</span>
+        </div>
+        <div class="top-bar-actions d-flex align-items-center justify-content-center flex-wrap gap-2 gap-md-3">
+          <a href="contact.html" class="tanishq-top-link top-bar-item"><i class="bi bi-geo-alt me-1 text-gold"></i> Find a Store</a>
+          <span class="top-bar-divider opacity-50">|</span>
+          <a href="tel:18002660123" class="tanishq-top-link top-bar-item"><i class="bi bi-telephone me-1 text-gold"></i> 1800 266 0123</a>
+          <span class="top-bar-divider opacity-50">|</span>
+          <a href="contact.html" class="tanishq-top-link top-bar-item"><i class="bi bi-calendar-event me-1 text-gold"></i> Book Appointment</a>
+        </div>
       </div>
     </div>
   </div>
@@ -401,8 +403,19 @@
         <a href="contact.html" class="mobile-drawer-link"><i class="bi bi-geo-alt me-2 text-gold"></i> FIND A STORE</a>
       </div>
 
+      <!-- VIP Account Links inside Drawer -->
+      <div class="p-2 border-top border-gold border-opacity-25 bg-gold-subtle">
+        <div class="small fw-bold text-gold px-2 pt-1 pb-2 font-serif text-uppercase" style="letter-spacing: 1px;">My Atelier Account</div>
+        <div class="mobile-drawer-nav">
+          <a href="profile.html" class="mobile-drawer-link py-2"><i class="bi bi-person-circle me-2 text-gold"></i> My Profile</a>
+          <a href="orders.html" class="mobile-drawer-link py-2"><i class="bi bi-bag-check me-2 text-gold"></i> Orders Placed</a>
+          <a href="wishlist.html" class="mobile-drawer-link py-2"><i class="bi bi-heart me-2 text-gold"></i> Saved Wishlist</a>
+          <a href="cart.html" class="mobile-drawer-link py-2"><i class="bi bi-bag me-2 text-gold"></i> Shopping Bag</a>
+        </div>
+      </div>
+
       <!-- Quick Contact Info -->
-      <div class="p-3 mt-3 border-top text-center text-muted small" style="background: #FAF6F0;">
+      <div class="p-3 border-top text-center text-muted small" style="background: #FAF6F0;">
         <div class="fw-semibold text-gold mb-1"><i class="bi bi-telephone me-1"></i> 1800 266 0123</div>
         <div>100% Certified • Free Insured Shipping</div>
       </div>
@@ -2190,7 +2203,7 @@
       </div>
 
       <!-- 1. Left Vertical Burgundy Sidebar with Royal Logo Crest & Gold Lotus Vine Motif -->
-      <div class="royal-hero-sidebar d-none d-md-flex">
+      <div class="royal-hero-sidebar d-none d-lg-flex">
         <div class="royal-sidebar-content">
           <!-- Top Royal Arch Logo Crest (Luxury Gold Medallion Hallmark) -->
           <div class="royal-logo-crest mb-2 text-center">
